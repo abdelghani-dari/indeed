@@ -5,6 +5,7 @@ import EmailChangeModal from "./emailChangeModal";
 import PhoneChangeModal from "./phoneChangeModal";
 import CloseAccountModal from "./closeAccountModal";
 import { getLoggedInStatus } from "@/components/helpers/getLoggedinStatus";
+import Head from "next/head";
 
 function Page() {
   const user = {
@@ -61,6 +62,9 @@ function Page() {
   };
   return (
     <>
+      <Head>
+        <title>Account settings</title>
+      </Head>
       {isLoggedIn ? (
         <div className="divide-y-2 grid space-y-6 px-8 pe-28">
           <h2 className="text-2xl font-semibold text-slate-700">
@@ -141,7 +145,8 @@ function Page() {
             <button
               type="button"
               onClick={handleLogin}
-              className="bg-transparent font-semibold text-[#3662a7] ring-1 hover:ring-2 hover:bg-[#eef1fe] ring-[#16418175] px-8 flex items-center rounded-md" >
+              className="bg-transparent font-semibold text-[#3662a7] ring-1 hover:ring-2 hover:bg-[#eef1fe] ring-[#16418175] px-8 flex items-center rounded-md"
+            >
               Sign out
             </button>
           </div>

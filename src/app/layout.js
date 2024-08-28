@@ -16,6 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="./favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Indeed </title>
+      </head>
       <body className={inter.className}>
       <ThemeProvider
             attribute="class"

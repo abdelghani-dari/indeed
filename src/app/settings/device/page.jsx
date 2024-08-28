@@ -1,5 +1,6 @@
 'use client'
 import { getLoggedInStatus } from "@/components/helpers/getLoggedinStatus";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 
 function Page() {
@@ -21,6 +22,9 @@ useEffect(() => {
 }, []);
   return (
     <>
+         <Head>
+        <title>Device management</title>
+      </Head>
     {isLoggedIn ? <div className="divide-y-2 grid space-y-6 px-8 pe-28">
     <h2 className="text-2xl font-semibold text-slate-700">
     Device management
