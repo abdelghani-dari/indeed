@@ -6,7 +6,7 @@ import PhoneChangeModal from "./phoneChangeModal";
 import CloseAccountModal from "./closeAccountModal";
 import { getLoggedInStatus } from "@/components/helpers/getLoggedinStatus";
 
-function page() {
+function Page() {
   const user = {
     accountType: "Job Seeker",
     email: "abdelghaani@dari.com",
@@ -43,7 +43,7 @@ function page() {
     } else if (!storedPhone) {
       localStorage.setItem("accountphone", user.phone);
     }
-  }, [isLoggedIn]);
+  }, []);
 
   const handleAccountTypeChange = (newType) => {
     setAccountType(newType);
@@ -158,4 +158,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

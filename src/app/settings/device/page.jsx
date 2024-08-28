@@ -2,11 +2,8 @@
 import { getLoggedInStatus } from "@/components/helpers/getLoggedinStatus";
 import { useEffect, useState } from "react";
 
-function page() {
-  const [isLoggedIn, setIsLoggedIn] = useState();
-  useEffect(() => {
-    setIsLoggedIn(getLoggedInStatus());
-  }, [isLoggedIn]);
+function Page() {
+
   const sessions = [
     { device: 'Firefox Windows', date: 'August 27, 2024', ip: '196.118.152.83', location: 'Casablanca', current: true },
     { device: 'Firefox Windows', date: 'August 27, 2024', ip: '196.118.152.83', location: 'Casablanca', current: false },
@@ -17,6 +14,11 @@ function page() {
     { device: 'Chrome Mobile Android', date: 'August 6, 2024', ip: '196.118.152.83', location: 'Casablanca', current: false },
     { device: 'Firefox Windows', date: 'July 23, 2024', ip: '160.179.193.70', location: 'Berrechid', current: false },
 ];
+
+const [isLoggedIn, setIsLoggedIn] = useState();
+useEffect(() => {
+  setIsLoggedIn(getLoggedInStatus());
+}, []);
   return (
     <>
     {isLoggedIn ? <div className="divide-y-2 grid space-y-6 px-8 pe-28">
@@ -77,4 +79,4 @@ function page() {
 </> )
 }
 
-export default page
+export default Page

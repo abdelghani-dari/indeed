@@ -3,11 +3,11 @@ import { getLoggedInStatus } from "@/components/helpers/getLoggedinStatus";
 import { useEffect, useState } from "react";
 import { Info } from "lucide-react";
 
-function page() {
+function Page() {
   const [isLoggedIn, setIsLoggedIn] = useState();
   useEffect(() => {
     setIsLoggedIn(getLoggedInStatus());
-  }, [isLoggedIn]);
+  }, []);
   return (
     <>
     {isLoggedIn ?<div className="divide-y-2 grid space-y-6 px-8 pe-28">
@@ -57,4 +57,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
